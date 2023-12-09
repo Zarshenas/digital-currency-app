@@ -6,7 +6,7 @@ function TableCoin({ coins }) {
     <div>
       <div
         id="table-head"
-        className="px-5 py-3 text-captext border border-secondbg rounded-2xl grid grid-cols-7 items-center justify-center justify-items-center"
+        className="px-5 py-3 w-full text-captext border border-secondbg rounded-2xl grid grid-cols-7 items-center justify-center justify-items-center"
       >
         <span>#Rank</span>
         <span>Coin</span>
