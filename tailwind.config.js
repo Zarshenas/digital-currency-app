@@ -11,6 +11,7 @@ export default {
         'secondbg':'#3B3B3B',
         'deftext':'#ffffff',
         'captext' : '#858584',
+        'theme-color':'#A259FF',
       },
     },
   },

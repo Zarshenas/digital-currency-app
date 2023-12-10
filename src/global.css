@@ -21,3 +21,17 @@
     color: inherit;
   }
 }
+
+@layer components{
+  .button-primary{
+    min-width: 40px;
+   @apply bg-theme-color px-3 py-2 rounded-lg mx-2 
+  } 
+  .button-secondary{
+    min-width: 40px;
+    @apply bg-transparent border border-theme-color px-3 py-2 rounded-lg mx-2
+   } 
+   .button-disabled{
+    @apply opacity-25
+   }
+}
