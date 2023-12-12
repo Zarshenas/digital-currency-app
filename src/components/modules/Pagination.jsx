@@ -15,7 +15,7 @@ function Pagination({ pageData: { pageNumber, setPageNumber } }) {
     }
   };
   return (
-    <div className="my-16 mx-auto w-max">
+    <div className="my-16 mx-auto flex justify-center">
       <button
         className={"button-primary w-24 disabled:button-disabled"}
         disabled={pageNumber === 1}

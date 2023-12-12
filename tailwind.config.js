@@ -5,6 +5,12 @@ export default {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
+    minWidth: {
+      'cus': '380px',
+    },
+    width:{
+      'cus' :'380px'
+    },
     extend: {
       colors:{
         'mainbg':'#2b2b2b',

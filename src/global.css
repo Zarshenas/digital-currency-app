@@ -22,16 +22,28 @@
   }
 }
 
-@layer components{
-  .button-primary{
+@layer components {
+  .button-primary {
     min-width: 40px;
-   @apply bg-theme-color px-3 py-2 rounded-lg mx-2 
-  } 
-  .button-secondary{
+    @apply bg-theme-color px-3 py-2 rounded-lg mx-2;
+  }
+  .button-secondary {
     min-width: 40px;
-    @apply bg-transparent border border-theme-color px-3 py-2 rounded-lg mx-2
-   } 
-   .button-disabled{
-    @apply opacity-25
-   }
+    @apply bg-transparent border border-theme-color px-3 py-2 rounded-lg mx-2;
+  }
+  .button-disabled {
+    @apply opacity-25;
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }

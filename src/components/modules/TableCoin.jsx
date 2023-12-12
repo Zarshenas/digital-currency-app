@@ -1,7 +1,9 @@
 import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
-function TableCoin({ coins }) {
-  console.log(coins);
+
+import symbolHandler from '../../helper/CurrencySymbol'
+
+function TableCoin({coins , currency}) {
   return (
     <div>
       <div
@@ -18,7 +20,7 @@ function TableCoin({ coins }) {
       </div>
       <div id="table-rows">
         {coins.map((coinData) => (
-          <TableRow key={coinData.id} coin={coinData} />
+          <TableRow currency={currency} key={coinData.id} coin={coinData} />
         ))}
       </div>
     </div>
@@ -28,6 +30,7 @@ function TableCoin({ coins }) {
 export default TableCoin;
 
 const TableRow = ({
+  currency,
   coin: {
     market_cap_rank,
     name,
@@ -42,17 +45,17 @@ const TableRow = ({
   return (
     <div className='bg-secondbg  rounded-xl my-6 px-5 py-3 grid grid-cols-12 items-center justify-items-center'>
       <div className="col-start-1 col-end-2">
-        <span>{market_cap_rank}</span>
+        <span className="font-extrabold text-lg">{market_cap_rank}</span>
       </div>
       <div className="flex items-center w-max col-start-2 col-end-4">
         <img className="w-8 h-8 mr-3" src={image} alt={id} />
-        <span className="font-bold text-lg">{symbol.toUpperCase()}</span>
+        <span className="font-extralight text-md">{symbol.toUpperCase()}</span>
       </div>
       <div className="col-start-4 col-end-7">
         <span className="font-bold text-lg w-max ">{name}</span>
       </div>
       <div className="col-start-7 col-end-8">
-        <span className="font-extralight text-lg">${current_price.toLocaleString()}</span>
+        <span className="font-extralight text-md">{symbolHandler(currency)} {current_price.toLocaleString()}</span>
       </div>
       <div className="col-start-8 col-end-10">
         {price_change > 0 ? (
@@ -62,7 +65,7 @@ const TableRow = ({
         )}
       </div>
       <div className="col-start-10 col-end-13">
-        <span className="font-extralight text-lg w-max" >${total_volume.toLocaleString()}</span>
+        <span className="font-extralight text-md w-max" >{symbolHandler(currency)} {total_volume.toLocaleString()}</span>
       </div>
       <div className="col-start-13 col-end-14">
         {price_change > 0 ? (
