@@ -1,8 +1,14 @@
 {
   "name": "crypto-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "author": "Siza",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Siza36/digital-currency-app"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
