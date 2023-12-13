@@ -4,27 +4,46 @@
 
 @layer base {
   :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif  ;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
   }
 
   body {
-    margin: auto;
-    max-width: 1200px;
-    min-height: 100vh;
-    padding: 10px;
-    background-color: #131315;
-    color: #fff;
+    @apply m-auto max-w-6xl min-h-screen p-3 bg-mainbg text-deftext;
   }
 
   * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    @apply p-0 m-0 box-border;
   }
 
   a {
     text-decoration: inherit;
     color: inherit;
+  }
+}
+
+@layer components {
+  .button-primary {
+    min-width: 40px;
+    @apply bg-theme-color px-3 py-2 rounded-lg mx-2 cursor-pointer;
+  }
+  .button-secondary {
+    min-width: 40px;
+    @apply bg-transparent border border-theme-color cursor-pointer px-3 py-2 rounded-lg mx-2;
+  }
+  .button-disabled {
+    @apply opacity-25;
+  }
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
