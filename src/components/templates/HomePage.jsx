@@ -23,10 +23,10 @@ function HomePage() {
       });
   }, [pageNumber, region]);
   return (
-    <>
+    <div>
       {isLoading ? (
         <Triangle
-          height="200"
+          height="100vh"
           width="200"
           color="#A259FF"
           ariaLabel="triangle-loading"
@@ -40,7 +40,7 @@ function HomePage() {
           <Pagination pageData={{ pageNumber, setPageNumber }} />
         </>
       )}
-    </>
+    </div>
   );
 }
 

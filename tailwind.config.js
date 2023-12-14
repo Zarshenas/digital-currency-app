@@ -19,6 +19,9 @@ export default {
         'captext' : '#858584',
         'theme-color':'#A259FF',
       },
+      spacing: {
+        '10px': '10px',
+      },
     },
   },
   plugins: [],
